@@ -51,6 +51,8 @@
     "test": "node scripts/test.js --env=jsdom"
   },
   "devDependencies": {
+    "enzyme": "^3.4.1",
+    "enzyme-adapter-react-16": "^1.2.0",
     "node-sass": "^4.9.3",
     "sass-loader": "^7.1.0"
   },
@@ -58,6 +60,9 @@
     "collectCoverageFrom": [
       "src/**/*.{js,jsx,mjs}"
     ],
+
+    "setupTestFrameworkScriptFile": "<rootDir>/src/modules/App.test.js",
+
     "setupFiles": [
       "<rootDir>/config/polyfills.js"
     ],
