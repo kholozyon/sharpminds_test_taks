@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat')
+
+$primary-font: 'Montserrat', sans-serif
+
+//colors
+$body-color: #46a1de
+$white: #fff
+$gray: #50555a
+
+body
+  margin: 0
+  padding: 0
+  background-color: $body-color
+  font: 16px $primary-font
+
+.wrapper
+  display: flex
+  justify-content: center
+  min-height: 100vh
+  height: auto
+
+.tabs
+  max-width: 50%
+  width: 100%
+  margin-top: 10%
+  &__list
+    width: 100%
+    margin: 0
+    padding: 0
+    list-style: none
+    display: flex
+    &-item
+      color: $white
+      position: relative
+      cursor: pointer
+      padding: 20px 20px 15px 20px
+      flex: 1
+      text-align: center
+      &:before
+        content: ""
+        position: absolute
+        z-index: -1
+        width: 100%
+        height: 10px
+        bottom: -10px
+        left: 0
+        background-color: rgba(255, 255, 255, 0.3)
+        transition-duration: .25s
+        border-radius: 5px 5px 0 0
+      &:hover
+        &:before
+          bottom: -5px
+      &.active
+        color: $gray
+        &:before
+          height: 100%
+          bottom: -10px
+          background-color: $white
+
+  &__content
+    width: 100%
+    text-align: center
+    border-radius: 5px
+    padding: 45px 40px 40px 40px
+    background-color: $white
+    position: relative
+    z-index: 10
+    box-sizing: border-box
